@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { Search, Globe, MapPin, ChevronRight } from 'lucide-react';
 import { airlines } from '@/data/flights';
 
