@@ -53,8 +53,8 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-inner">
-        <Link href="/" className="nav-logo">
-          H<span>S</span>IA
+        <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/hsia-logo.svg" alt="HSIA Logo" style={{ height: '40px', width: 'auto' }} />
         </Link>
         
         <div className="nav-links">

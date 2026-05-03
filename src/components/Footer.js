@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <h2>H<span>S</span>IA</h2>
+            <img src="/hsia-logo.svg" alt="HSIA Logo" style={{ height: '48px', width: 'auto', marginBottom: '16px' }} />
             <p>Providing world-class aviation services and a premium travel experience at the heart of Bangladesh.</p>
             <div style={{ display: 'flex', gap: 16, marginTop: 32 }}>
               <Link href="#" className="btn btn-outline" style={{ padding: '8px 16px', borderRadius: 12, borderColor: '#333', color: '#999' }}>
