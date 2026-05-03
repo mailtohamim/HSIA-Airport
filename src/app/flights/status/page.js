@@ -72,7 +72,7 @@ function FlightStatusContent() {
           </button>
         </div>
 
-        <div className="input-group" style={{ margin: 0, width: 400 }}>
+        <div className="input-group search-input-group">
           <Search size={20} color="var(--text-light)" />
           <input
             type="text"
@@ -83,11 +83,11 @@ function FlightStatusContent() {
         </div>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, padding: '0 12px' }}>
-        <button className="btn btn-outline" style={{ padding: '10px 24px', fontSize: '0.9rem' }}>
-          <Filter size={16} /> Show earlier flights
+      <div className="status-header-mobile">
+        <button className="btn btn-outline filter-btn">
+          <Filter size={16} /> <span className="hide-mobile">Show earlier flights</span><span className="show-mobile">Earlier</span>
         </button>
-        <div style={{ fontWeight: 800, color: 'var(--text-light)', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div className="date-display">
           <Clock size={18} /> Today, 3 May
         </div>
       </div>
@@ -101,9 +101,11 @@ function FlightStatusContent() {
           
           return (
             <Link href={`/flights/${flight.id}`} key={flight.id} className={`flight-row-premium ${isTakenOff ? 'flight-row-takenoff' : ''}`}>
-              <div className="f-time">{flight.scheduledTime}</div>
-              <div className="f-time" style={{ color: flight.actualTime !== flight.scheduledTime ? 'var(--danger)' : 'inherit' }}>
-                {flight.actualTime}
+              <div className="f-times-col">
+                <div className="f-time">{flight.scheduledTime}</div>
+                <div className="f-time-actual" style={{ color: flight.actualTime !== flight.scheduledTime ? 'var(--danger)' : 'var(--text-light)' }}>
+                  {flight.actualTime}
+                </div>
               </div>
               <div className="f-info">
                 <div className="f-airline-logo">{flight.airlineCode}</div>
@@ -112,8 +114,8 @@ function FlightStatusContent() {
                   <div className="f-dest-sub">{flight.flightNumber} • {airline ? airline.name : ''}</div>
                 </div>
               </div>
-              <div style={{ fontWeight: 700, color: 'var(--text-light)' }}>
-                {flight.terminal} • Gate {flight.gate}
+              <div className="f-gate-col">
+                <span className="hide-mobile">{flight.terminal} • Gate </span>{flight.gate}
               </div>
               <div className={`status-pill ${statusClass(flight.status)}`}>
                 {flight.status}
@@ -138,11 +140,11 @@ export default function FlightStatusPage() {
       <div className="page-header">
         <div className="container">
           <h1 className="page-title">Flight Status</h1>
-          <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: 8 }}>Track real-time arrivals and departures at HSIA.</p>
+          <p className="page-subtitle">Track real-time arrivals and departures at HSIA.</p>
         </div>
       </div>
 
-      <div className="container" style={{ paddingBottom: 100 }}>
+      <div className="container pb-100">
         <Suspense fallback={<div style={{ padding: '40px', textAlign: 'center', fontWeight: 600 }}>Loading flight data...</div>}>
           <FlightStatusContent />
         </Suspense>
@@ -158,6 +160,40 @@ export default function FlightStatusPage() {
         .status-takenoff { background: #f4f9f8; color: var(--primary); }
         .status-landed { background: #e6f7ef; color: #008744; }
         .status-expected { background: #e6f7ff; color: #0050b3; }
+
+        .search-input-group { width: 400px; }
+        .status-header-mobile { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 0 12px; }
+        .filter-btn { padding: 10px 24px; font-size: 0.9rem; }
+        .date-display { font-weight: 800; color: var(--text-light); display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+        .show-mobile { display: none; }
+        .page-subtitle { color: var(--text-light); font-size: 1.1rem; margin-top: 8px; }
+        .pb-100 { padding-bottom: 100px; }
+        
+        .f-times-col { display: flex; gap: 20px; align-items: center; width: 200px; }
+        .f-time-actual { font-weight: 600; font-size: 0.9rem; }
+        .f-gate-col { font-weight: 700; color: var(--text-light); }
+
+        @media (max-width: 768px) {
+          .flight-row-premium {
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto;
+            gap: 16px; padding: 20px 16px;
+          }
+          .f-times-col { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; width: auto; grid-column: 2; grid-row: 1; }
+          .f-info { grid-column: 1; grid-row: 1; }
+          .f-gate-col { grid-column: 1; grid-row: 2; font-size: 0.85rem; display: flex; align-items: center; }
+          .status-pill { grid-column: 2; grid-row: 2; margin-left: auto; }
+          
+          .search-input-group { width: 100% !important; margin: 0; }
+          .hide-mobile { display: none; }
+          .show-mobile { display: inline; }
+          .filter-btn { padding: 8px 16px; }
+          .status-header-mobile { padding: 0; }
+          .pb-100 { padding-bottom: 40px; }
+          
+          .f-airline-logo { width: 40px; height: 40px; }
+          .f-dest-name { font-size: 1rem; }
+        }
       `}</style>
     </div>
   );

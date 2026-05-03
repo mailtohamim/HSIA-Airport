@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BottomNav from '@/components/BottomNav';
 
 export const metadata = {
   title: 'Hazrat Shahjalal International Airport (HSIA) — Dhaka',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <BottomNav />
       </body>
     </html>
   );

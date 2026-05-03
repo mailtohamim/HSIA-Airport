@@ -86,8 +86,8 @@ export default function FlightTracker({ flight }) {
   const distanceKm = Math.round(111.32 * Math.sqrt(Math.pow(destination.lat - origin.lat, 2) + Math.pow((destination.lng - origin.lng) * Math.cos(origin.lat * Math.PI / 180), 2)));
 
   return (
-    <div className="tracker-container" style={{ height: 600, display: 'grid', gridTemplateColumns: '400px 1fr', background: '#fff', borderRadius: 16, overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-      <div className="tracker-panel" style={{ position: 'relative', width: '100%', borderRight: '1px solid var(--border)', boxShadow: 'none' }}>
+    <div className="tracker-container">
+      <div className="tracker-panel">
         <div style={{ background: 'var(--primary)', color: '#fff', padding: '32px' }}>
           <div style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', opacity: 0.8, marginBottom: 8 }}>Live Flight Tracker</div>
           <h2 style={{ fontSize: '2rem', fontWeight: 900 }}>{flight.flightNumber}</h2>
@@ -142,8 +142,8 @@ export default function FlightTracker({ flight }) {
         </div>
       </div>
 
-      <div style={{ position: 'relative', width: '100%', height: '100%', zIndex: 1 }}>
-        <div id="tracker-map" style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }} />
+      <div className="tracker-map-wrapper">
+        <div id="tracker-map" />
       </div>
 
       <style jsx global>{`
