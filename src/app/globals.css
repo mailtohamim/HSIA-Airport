@@ -353,14 +353,6 @@ img { max-width: 100%; height: auto; }
   .tab-premium { padding: 10px; width: 100%; display: flex; justify-content: center; }
   .input-group { width: 100% !important; margin: 0; }
   
-  .flight-row-premium {
-    display: flex; flex-direction: column; align-items: stretch; gap: 16px;
-    padding: 20px; border-radius: 16px;
-  }
-  .flight-row-premium > div:nth-child(1), .flight-row-premium > div:nth-child(2) { display: none; /* Hide top level times, we will put them inside f-info */ }
-  .f-info { display: grid; grid-template-columns: 48px 1fr auto; gap: 16px; width: 100%; align-items: flex-start; }
-  .f-dest-sub { display: flex; flex-direction: column; gap: 4px; }
-  
   .footer-top { grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
   .footer-bottom { flex-direction: column; gap: 24px; text-align: center; }
 }
