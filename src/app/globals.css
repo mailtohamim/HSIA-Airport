@@ -267,6 +267,7 @@ img { max-width: 100%; height: auto; }
   padding: 8px 16px; border-radius: 50px; font-weight: 800; font-size: 0.8rem;
   text-transform: uppercase; letter-spacing: 0.5px; width: fit-content;
 }
+.journey-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; }
 
 /* Footer */
 .footer { background: #1a1a1a; color: #fff; padding: 80px 0 40px; }
@@ -303,6 +304,7 @@ img { max-width: 100%; height: auto; }
   .exp-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .exp-card:first-child { grid-row: span 1; grid-column: span 2; }
   .flight-row-premium { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .journey-grid { grid-template-columns: 1fr; gap: 40px; }
 
   .tracker-container { grid-template-columns: 1fr; height: auto; display: flex; flex-direction: column; }
   .tracker-panel { border-right: none; border-bottom: 1px solid var(--border); }

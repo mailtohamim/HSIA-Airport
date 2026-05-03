@@ -77,7 +77,7 @@ export default function FlightDetailPage({ params }) {
           <FlightTracker flight={flight} />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80 }}>
+        <div className="journey-grid">
           <div>
             <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 12 }}>Journey Planner</h2>
             <p style={{ color: 'var(--text-light)', marginBottom: 40 }}>Personalise your airport experience based on your traveller profile.</p>
