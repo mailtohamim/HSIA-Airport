@@ -1,6 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { Search, ChevronRight, Plane, Clock, Info, ArrowRight, Filter } from 'lucide-react';
 import { departures, arrivals, airlines, airports } from '@/data/flights';
 
@@ -26,8 +27,16 @@ function sortFlights(flights) {
 }
 
 export default function FlightStatusPage() {
+  const searchParams = useSearchParams();
   const [tab, setTab] = useState('departures');
   const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    const q = searchParams.get('search');
+    if (q) setSearch(q);
+    const t = searchParams.get('tab');
+    if (t) setTab(t);
+  }, [searchParams]);
 
   const flights = tab === 'departures' ? departures : arrivals;
   const sorted = sortFlights(flights);

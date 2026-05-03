@@ -1,33 +1,68 @@
+'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Search, Plane, Clock, Shield, Map, Coffee, ShoppingBag, Star, ChevronRight, Info, Heart, Camera, Briefcase } from 'lucide-react';
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/flights/status?search=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
+  const highlights = [
+    { title: 'Accessibility at HSIA', sub: 'Inclusive Travel', img: '/images/highlight_accessibility.png' },
+    { title: 'Know your baggage', sub: 'Travel Smart', img: '/images/highlight_baggage.png' },
+    { title: 'Digital Immigration', sub: 'Fast Track', img: '/images/highlight_immigration.png' },
+    { title: 'Green Airport Initiative', sub: 'Sustainability', img: '/images/highlight_sustainability.png' },
+  ];
+
+  const experiences = [
+    { label: 'Discover shops', icon: <ShoppingBag size={20} />, img: '/images/exp_shops.png' },
+    { label: 'Explore lounges', icon: <Star size={20} />, img: '/images/exp_lounges.png' },
+    { label: 'Relax & refresh', icon: <Heart size={20} />, img: '/images/exp_relax.png' },
+    { label: 'Find restaurants', icon: <Coffee size={20} />, img: '/images/exp_dining.png' },
+    { label: 'Browse services', icon: <Info size={20} />, img: '/images/exp_services.png' },
+  ];
+
   return (
     <>
       {/* Hero */}
       <section className="hero home-hero">
-        <div className="hero-bg" />
+        <div className="hero-bg" style={{ backgroundImage: 'url("/HSIA_Terminal_3.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.6 }} />
         <div className="container home-hero-content">
           <h1>Experience HSIA</h1>
           <div className="search-box-wrapper">
             <div className="search-card">
               <div className="search-main">
                 <h2>Find your flight</h2>
-                <div className="input-group">
-                  <Search size={20} color="var(--text-light)" />
-                  <input type="text" placeholder="Flight number, airline or city" />
-                </div>
-                <div className="search-actions">
-                  <Link href="/flights/status?tab=departures" className="btn btn-primary">
-                    Departures <ChevronRight size={18} />
-                  </Link>
-                  <Link href="/flights/status?tab=arrivals" className="btn btn-outline">
-                    Arrivals
-                  </Link>
-                </div>
+                <form onSubmit={handleSearch}>
+                  <div className="input-group">
+                    <Search size={20} color="var(--text-light)" />
+                    <input 
+                      type="text" 
+                      placeholder="Flight number, airline or city" 
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </div>
+                  <div className="search-actions">
+                    <button type="submit" className="btn btn-primary" onClick={() => { if(!searchQuery) router.push('/flights/status?tab=departures') }}>
+                      Departures <ChevronRight size={18} />
+                    </button>
+                    <Link href="/flights/status?tab=arrivals" className="btn btn-outline">
+                      Arrivals
+                    </Link>
+                  </div>
+                </form>
               </div>
               <div className="quick-access">
-                <Link href="/" className="quick-btn">
+                <Link href="/information/baggage" className="quick-btn">
                   <Heart className="icon" size={28} />
                   <span>Prayer Room</span>
                 </Link>
@@ -89,14 +124,9 @@ export default function Home() {
             <div style={{ fontWeight: 800 }}>1 / 4 <ChevronRight size={18} style={{ verticalAlign: 'middle' }} /></div>
           </div>
           <div className="highlights-scroll">
-            {[
-              { title: 'Accessibility at HSIA', sub: 'Inclusive Travel' },
-              { title: 'Know your baggage', sub: 'Travel Smart' },
-              { title: 'Digital Immigration', sub: 'Fast Track' },
-              { title: 'Green Airport Initiative', sub: 'Sustainability' },
-            ].map((h, i) => (
+            {highlights.map((h, i) => (
               <div key={i} className="highlight-item">
-                <div className="highlight-img" style={{ background: `linear-gradient(${135 + i * 20}deg, #015c55, #02a896)` }} />
+                <div className="highlight-img" style={{ backgroundImage: `url("${h.img}")`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 <div className="highlight-content">
                   <span>{h.sub}</span>
                   <h3>{h.title}</h3>
@@ -115,15 +145,9 @@ export default function Home() {
             <p className="section-subtitle">Discover world-class facilities and comfort during your time at our airport.</p>
           </div>
           <div className="exp-grid">
-            {[
-              { label: 'Discover shops', icon: <ShoppingBag size={20} /> },
-              { label: 'Explore lounges', icon: <Star size={20} /> },
-              { label: 'Relax & refresh', icon: <Heart size={20} /> },
-              { label: 'Find restaurants', icon: <Coffee size={20} /> },
-              { label: 'Browse services', icon: <Info size={20} /> },
-            ].map((exp, i) => (
+            {experiences.map((exp, i) => (
               <div key={i} className="exp-card">
-                <div className="exp-bg" style={{ background: `linear-gradient(${45 + i * 15}deg, #01796f, #004d47)` }} />
+                <div className="exp-bg" style={{ backgroundImage: `url("${exp.img}")`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 <div className="exp-overlay">
                   <div className="exp-label">
                     {exp.icon} {exp.label} <ChevronRight size={18} />

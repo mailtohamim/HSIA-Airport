@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Plane, Info, MapPin, Navigation, Clock } from 'lucide-react';
 import { airports } from '@/data/flights';
+import 'leaflet/dist/leaflet.css';
 
 export default function FlightTracker({ flight }) {
   const [mapReady, setMapReady] = useState(false);
@@ -15,7 +16,6 @@ export default function FlightTracker({ flight }) {
     let map;
     const initMap = async () => {
       const L = (await import('leaflet')).default;
-      await import('leaflet/dist/leaflet.css');
 
       if (document.getElementById('tracker-map')?.children.length > 0) return;
 
@@ -64,6 +64,11 @@ export default function FlightTracker({ flight }) {
       const bounds = L.latLngBounds([[origin.lat, origin.lng], [destination.lat, destination.lng]]);
       map.fitBounds(bounds.pad(0.2));
 
+      // Fix map rendering issues by invalidating size after container is fully painted
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 100);
+
       setMapReady(true);
     };
 
@@ -75,7 +80,7 @@ export default function FlightTracker({ flight }) {
   const distanceKm = Math.round(111.32 * Math.sqrt(Math.pow(destination.lat - origin.lat, 2) + Math.pow((destination.lng - origin.lng) * Math.cos(origin.lat * Math.PI / 180), 2)));
 
   return (
-    <div className="tracker-container" style={{ height: 600, display: 'grid', gridTemplateColumns: '400px 1fr', background: '#fff' }}>
+    <div className="tracker-container" style={{ height: 600, display: 'grid', gridTemplateColumns: '400px 1fr', background: '#fff', borderRadius: 16, overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
       <div className="tracker-panel" style={{ position: 'relative', width: '100%', borderRight: '1px solid var(--border)', boxShadow: 'none' }}>
         <div style={{ background: 'var(--primary)', color: '#fff', padding: '32px' }}>
           <div style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', opacity: 0.8, marginBottom: 8 }}>Live Flight Tracker</div>
@@ -131,7 +136,9 @@ export default function FlightTracker({ flight }) {
         </div>
       </div>
 
-      <div id="tracker-map" style={{ width: '100%', height: '100%' }} />
+      <div style={{ position: 'relative', width: '100%', height: '100%', zIndex: 1 }}>
+        <div id="tracker-map" style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }} />
+      </div>
 
       <style jsx global>{`
         .airport-tooltip {
