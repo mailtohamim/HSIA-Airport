@@ -61,19 +61,19 @@ export default function Home() {
                 </form>
               </div>
               <div className="quick-access">
-                <Link href="/information/baggage" className="quick-btn">
+                <Link href="/facilities/prayer-room" className="quick-btn">
                   <Heart className="icon" size={28} />
                   <span>Prayer Room</span>
                 </Link>
-                <Link href="/" className="quick-btn">
+                <Link href="/facilities/cip-lounge" className="quick-btn">
                   <Star className="icon" size={28} />
                   <span>CIP Lounge</span>
                 </Link>
-                <Link href="/" className="quick-btn">
+                <Link href="/facilities/dine" className="quick-btn">
                   <Coffee className="icon" size={28} />
                   <span>Dine</span>
                 </Link>
-                <Link href="/" className="quick-btn">
+                <Link href="/facilities/shop" className="quick-btn">
                   <ShoppingBag className="icon" size={28} />
                   <span>Shop</span>
                 </Link>
