@@ -269,6 +269,18 @@ img { max-width: 100%; height: auto; }
 }
 .journey-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; }
 
+.flight-details-card {
+  margin-top: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 32px;
+}
+.fd-col {
+  border-right: 1px solid var(--border);
+  padding: 0 24px;
+}
+.fd-col:first-child { padding-left: 0; }
+.fd-col:last-child { border-right: none; padding-right: 0; }
+
 /* Footer */
 .footer { background: #1a1a1a; color: #fff; padding: 80px 0 40px; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 80px; }
@@ -358,4 +370,21 @@ img { max-width: 100%; height: auto; }
   
   .footer-top { grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
   .footer-bottom { flex-direction: column; gap: 24px; text-align: center; }
+
+  .flight-details-card {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 24px !important;
+    gap: 24px !important;
+  }
+  .fd-col {
+    padding: 0 !important;
+    border-right: none !important;
+  }
+  .fd-col:nth-child(odd) {
+    border-right: 1px solid var(--border) !important;
+    padding-right: 16px !important;
+  }
+  .fd-col:nth-child(even) {
+    padding-left: 16px !important;
+  }
 }

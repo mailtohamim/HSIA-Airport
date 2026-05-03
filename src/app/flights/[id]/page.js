@@ -47,22 +47,22 @@ export default function FlightDetailPage({ params }) {
             </div>
           </div>
 
-          <div className="search-card" style={{ marginTop: 40, gridTemplateColumns: 'repeat(4, 1fr)', padding: '32px' }}>
-            <div style={{ borderRight: '1px solid var(--border)', paddingRight: 24 }}>
+          <div className="search-card flight-details-card">
+            <div className="fd-col">
               <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-light)', textTransform: 'uppercase', marginBottom: 8 }}>Date</div>
               <div style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text)' }}>3 May</div>
             </div>
-            <div style={{ borderRight: '1px solid var(--border)', paddingLeft: 24, paddingRight: 24 }}>
+            <div className="fd-col">
               <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-light)', textTransform: 'uppercase', marginBottom: 8 }}>Scheduled</div>
               <div style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text)' }}>{flight.scheduledTime}</div>
             </div>
-            <div style={{ borderRight: '1px solid var(--border)', paddingLeft: 24, paddingRight: 24 }}>
+            <div className="fd-col">
               <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-light)', textTransform: 'uppercase', marginBottom: 8 }}>Estimated</div>
               <div style={{ fontWeight: 800, fontSize: '1.25rem', color: flight.actualTime !== flight.scheduledTime ? 'var(--danger)' : 'var(--text)' }}>
                 {flight.actualTime}
               </div>
             </div>
-            <div style={{ paddingLeft: 24 }}>
+            <div className="fd-col">
               <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-light)', textTransform: 'uppercase', marginBottom: 8 }}>Terminal & Gate</div>
               <div style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text)' }}>{flight.terminal} • {flight.gate}</div>
             </div>
