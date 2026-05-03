@@ -16,18 +16,18 @@ export default function Home() {
   };
 
   const highlights = [
-    { title: 'Accessibility at HSIA', sub: 'Inclusive Travel', img: '/images/highlight_accessibility.png' },
-    { title: 'Know your baggage', sub: 'Travel Smart', img: '/images/highlight_baggage.png' },
-    { title: 'Digital Immigration', sub: 'Fast Track', img: '/images/highlight_immigration.png' },
+    { title: 'Accessibility at HSIA', sub: 'Inclusive Travel', img: '/images/Accessibility at HSIA.jpg' },
+    { title: 'Know your baggage', sub: 'Travel Smart', img: '/images/Know your baggage.jpg' },
+    { title: 'Digital Immigration', sub: 'Fast Track', img: '/images/Digital Immigration.jpg' },
     { title: 'Green Airport Initiative', sub: 'Sustainability', img: '/images/highlight_sustainability.png' },
   ];
 
   const experiences = [
-    { label: 'Discover shops', icon: <ShoppingBag size={20} />, img: '/images/exp_shops.png' },
-    { label: 'Explore lounges', icon: <Star size={20} />, img: '/images/exp_lounges.png' },
-    { label: 'Relax & refresh', icon: <Heart size={20} />, img: '/images/exp_relax.png' },
-    { label: 'Find restaurants', icon: <Coffee size={20} />, img: '/images/exp_dining.png' },
-    { label: 'Browse services', icon: <Info size={20} />, img: '/images/exp_services.png' },
+    { label: 'Discover shops', icon: <ShoppingBag size={20} />, img: '/images/Discover shops.jpg' },
+    { label: 'Explore lounges', icon: <Star size={20} />, img: '/images/Explore lounges.jpg' },
+    { label: 'Relax & refresh', icon: <Heart size={20} />, img: '/images/Relax & refresh.jpg' },
+    { label: 'Find restaurants', icon: <Coffee size={20} />, img: '/images/Find restaurants.jpg' },
+    { label: 'Browse services', icon: <Info size={20} />, img: '/images/Browse services.jpg' },
   ];
 
   return (
