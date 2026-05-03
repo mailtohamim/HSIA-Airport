@@ -109,6 +109,12 @@ export default function Home() {
               <p>Rules, allowances and services to help you travel with peace of mind.</p>
               <Link href="/information/baggage" className="btn btn-outline">Read more</Link>
             </div>
+            <div className="service-card">
+              <div className="service-icon-box"><Bus size={32} /></div>
+              <h3>Transport</h3>
+              <p>Explore convenient transport and parking options at the airport.</p>
+              <Link href="/transport" className="btn btn-outline">View options</Link>
+            </div>
           </div>
         </div>
       </section>

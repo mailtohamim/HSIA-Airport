@@ -186,7 +186,7 @@ img { max-width: 100%; height: auto; }
 .quick-btn:hover .icon { transform: scale(1.1); }
 
 /* Service Cards */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 .service-card {
   background: #fff; border-radius: var(--radius); padding: 40px;
   box-shadow: var(--shadow); transition: all 0.3s ease;
