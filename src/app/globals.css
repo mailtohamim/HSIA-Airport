@@ -158,7 +158,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .search-box-wrapper {
-  width: 100%; max-width: 1100px; position: relative; margin: -100px auto 0; z-index: 20;
+  width: 100%; max-width: 1100px; position: relative; margin: 0 auto; z-index: 20;
 }
 .search-card {
   background: #fff; border-radius: 24px; padding: 40px;
