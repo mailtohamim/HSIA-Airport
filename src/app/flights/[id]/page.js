@@ -24,7 +24,6 @@ export default function FlightDetailPage({ params }) {
 
   const airline = airlines[flight.airlineCode];
   const dest = airports[flight.destination];
-  const isTakenOff = flight.status === 'Taken Off';
 
   return (
     <div id="flight-detail-page">
@@ -72,13 +71,11 @@ export default function FlightDetailPage({ params }) {
       </div>
 
       <div className="container" style={{ padding: '80px 0 120px' }}>
-        {/* Tracker Section */}
-        {(isTakenOff || flight.status === 'Boarding') && (
-          <div style={{ marginBottom: 80 }}>
-            <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 32 }}>Live Flight Tracker</h2>
-            <FlightTracker flight={flight} />
-          </div>
-        )}
+        {/* Tracker Section - Now visible for all flights including arrivals */}
+        <div style={{ marginBottom: 80 }}>
+          <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 32 }}>Live Flight Tracker</h2>
+          <FlightTracker flight={flight} />
+        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80 }}>
           <div>

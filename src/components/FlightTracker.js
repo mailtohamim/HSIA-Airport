@@ -19,23 +19,29 @@ export default function FlightTracker({ flight }) {
 
       if (document.getElementById('tracker-map')?.children.length > 0) return;
 
+      const currentLat = flight.currentLat || origin.lat;
+      const currentLng = flight.currentLng || origin.lng;
+
       map = L.map('tracker-map', {
-        center: [flight.currentLat || origin.lat, flight.currentLng || origin.lng],
+        center: [currentLat, currentLng],
         zoom: 6,
         zoomControl: false,
       });
 
       L.control.zoom({ position: 'topright' }).addTo(map);
 
-      L.tileLayer('https://{s}.tile.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      // Use a more reliable basemap URL without the .tile subdomain
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '© OpenStreetMap contributors',
       }).addTo(map);
 
       // Route lines
-      const routeCoords = [[origin.lat, origin.lng], [flight.currentLat, flight.currentLng]];
-      const futureCoords = [[flight.currentLat, flight.currentLng], [destination.lat, destination.lng]];
+      const routeCoords = [[origin.lat, origin.lng], [currentLat, currentLng]];
+      const futureCoords = [[currentLat, currentLng], [destination.lat, destination.lng]];
 
-      L.polyline(routeCoords, { color: '#01796f', weight: 4, opacity: 0.8 }).addTo(map);
+      if (flight.currentLat) {
+        L.polyline(routeCoords, { color: '#01796f', weight: 4, opacity: 0.8 }).addTo(map);
+      }
       L.polyline(futureCoords, { color: '#01796f', weight: 3, opacity: 0.3, dashArray: '10, 10' }).addTo(map);
 
       const airportIcon = L.divIcon({
@@ -58,7 +64,7 @@ export default function FlightTracker({ flight }) {
         className: '', iconSize: [28, 28], iconAnchor: [14, 14],
       });
 
-      L.marker([flight.currentLat, flight.currentLng], { icon: planeIcon }).addTo(map)
+      L.marker([currentLat, currentLng], { icon: planeIcon }).addTo(map)
         .bindTooltip(flight.flightNumber, { permanent: true, direction: 'top', offset: [0, -16] });
 
       const bounds = L.latLngBounds([[origin.lat, origin.lng], [destination.lat, destination.lng]]);
@@ -67,7 +73,7 @@ export default function FlightTracker({ flight }) {
       // Fix map rendering issues by invalidating size after container is fully painted
       setTimeout(() => {
         map.invalidateSize();
-      }, 100);
+      }, 200);
 
       setMapReady(true);
     };
@@ -94,7 +100,7 @@ export default function FlightTracker({ flight }) {
               <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary)' }}>{flight.origin}</div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', fontWeight: 600 }}>{origin.city}</div>
             </div>
-            <Plane size={32} style={{ color: 'var(--border)', transform: 'rotate(90deg)' }} />
+            <Plane size={32} style={{ color: 'var(--border)', transform: 'rotate(45deg)' }} />
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary)' }}>{flight.destination}</div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', fontWeight: 600 }}>{destination.city}</div>
