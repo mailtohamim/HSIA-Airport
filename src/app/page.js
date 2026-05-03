@@ -36,7 +36,6 @@ export default function Home() {
       <section className="hero home-hero">
         <div className="hero-bg" style={{ backgroundImage: 'url("/HSIA_Terminal_3.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.6 }} />
         <div className="container home-hero-content">
-          <h1>Experience HSIA</h1>
           <div className="search-box-wrapper">
             <div className="search-card">
               <div className="search-main">
