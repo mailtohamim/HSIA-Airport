@@ -1,66 +1,183 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import { Search, Plane, Clock, Shield, Map, Coffee, ShoppingBag, Star, ChevronRight, Info, Heart, Camera, Briefcase } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="hero home-hero">
+        <div className="hero-bg" />
+        <div className="container home-hero-content">
+          <h1>Experience HSIA</h1>
+          <div className="search-box-wrapper">
+            <div className="search-card">
+              <div className="search-main">
+                <h2>Find your flight</h2>
+                <div className="input-group">
+                  <Search size={20} color="var(--text-light)" />
+                  <input type="text" placeholder="Flight number, airline or city" />
+                </div>
+                <div className="search-actions">
+                  <Link href="/flights/status?tab=departures" className="btn btn-primary">
+                    Departures <ChevronRight size={18} />
+                  </Link>
+                  <Link href="/flights/status?tab=arrivals" className="btn btn-outline">
+                    Arrivals
+                  </Link>
+                </div>
+              </div>
+              <div className="quick-access">
+                <Link href="/" className="quick-btn">
+                  <Heart className="icon" size={28} />
+                  <span>Prayer Room</span>
+                </Link>
+                <Link href="/" className="quick-btn">
+                  <Star className="icon" size={28} />
+                  <span>CIP Lounge</span>
+                </Link>
+                <Link href="/" className="quick-btn">
+                  <Coffee className="icon" size={28} />
+                  <span>Dine</span>
+                </Link>
+                <Link href="/" className="quick-btn">
+                  <ShoppingBag className="icon" size={28} />
+                  <span>Shop</span>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Services */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Useful information</h2>
+            <p className="section-subtitle">Plan your journey with ease using our comprehensive guides and services.</p>
+          </div>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon-box"><Heart size={32} /></div>
+              <h3>Special Assistance</h3>
+              <p>Tailored support for passengers with reduced mobility or special needs.</p>
+              <Link href="/information/baggage" className="btn btn-outline">Explore services</Link>
+            </div>
+            <div className="service-card">
+              <div className="service-icon-box"><Shield size={32} /></div>
+              <h3>Travel Guidance</h3>
+              <p>Essential information on entry requirements and safety protocols.</p>
+              <Link href="/information/immigration-visas" className="btn btn-outline">View guidance</Link>
+            </div>
+            <div className="service-card">
+              <div className="service-icon-box"><ShoppingBag size={32} /></div>
+              <h3>Baggage</h3>
+              <p>Rules, allowances and services to help you travel with peace of mind.</p>
+              <Link href="/information/baggage" className="btn btn-outline">Read more</Link>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="highlights-section">
+        <div className="container">
+          <div className="highlights-header">
+            <div>
+              <h2 className="section-title" style={{ textAlign: 'left' }}>Highlights</h2>
+            </div>
+            <div style={{ fontWeight: 800 }}>1 / 4 <ChevronRight size={18} style={{ verticalAlign: 'middle' }} /></div>
+          </div>
+          <div className="highlights-scroll">
+            {[
+              { title: 'Accessibility at HSIA', sub: 'Inclusive Travel' },
+              { title: 'Know your baggage', sub: 'Travel Smart' },
+              { title: 'Digital Immigration', sub: 'Fast Track' },
+              { title: 'Green Airport Initiative', sub: 'Sustainability' },
+            ].map((h, i) => (
+              <div key={i} className="highlight-item">
+                <div className="highlight-img" style={{ background: `linear-gradient(${135 + i * 20}deg, #015c55, #02a896)` }} />
+                <div className="highlight-content">
+                  <span>{h.sub}</span>
+                  <h3>{h.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experiences */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Experiences at HSIA</h2>
+            <p className="section-subtitle">Discover world-class facilities and comfort during your time at our airport.</p>
+          </div>
+          <div className="exp-grid">
+            {[
+              { label: 'Discover shops', icon: <ShoppingBag size={20} /> },
+              { label: 'Explore lounges', icon: <Star size={20} /> },
+              { label: 'Relax & refresh', icon: <Heart size={20} /> },
+              { label: 'Find restaurants', icon: <Coffee size={20} /> },
+              { label: 'Browse services', icon: <Info size={20} /> },
+            ].map((exp, i) => (
+              <div key={i} className="exp-card">
+                <div className="exp-bg" style={{ background: `linear-gradient(${45 + i * 15}deg, #01796f, #004d47)` }} />
+                <div className="exp-overlay">
+                  <div className="exp-label">
+                    {exp.icon} {exp.label} <ChevronRight size={18} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VIP */}
+      <section className="section" style={{ padding: 0 }}>
+        <div className="container">
+          <div style={{ 
+            background: 'linear-gradient(135deg, #013d38 0%, #01796f 100%)', 
+            borderRadius: 32, padding: 80, color: '#fff', position: 'relative', overflow: 'hidden'
+          }}>
+            <div style={{ maxWidth: 500, position: 'relative', zIndex: 2 }}>
+              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 24, fontSize: '3rem' }}>CIP Lounge Service</h2>
+              <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: 40 }}>Treat yourself to a premium experience while travelling through Hazrat Shahjalal International Airport.</p>
+              <Link href="/" className="btn btn-accent" style={{ padding: '20px 40px', fontSize: '1.1rem' }}>
+                Book CIP Service <ChevronRight size={20} />
+              </Link>
+            </div>
+            <div style={{ position: 'absolute', right: -50, top: -50, opacity: 0.1, zIndex: 1 }}>
+              <Star size={400} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Happening in Dhaka</h2>
+          </div>
+          <div className="services-grid">
+            {[
+              { title: 'Cultural Festival', icon: <Camera size={32} /> },
+              { title: 'Trade Expo', icon: <Briefcase size={32} /> },
+              { title: 'Heritage Tour', icon: <Map size={32} /> },
+            ].map((ev, i) => (
+              <div key={i} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
+                <div className="service-icon-box">{ev.icon}</div>
+                <h3>{ev.title}</h3>
+                <p>Explore the vibrant events and rich history of Bangladesh's capital city.</p>
+                <Link href="/" className="mega-link">Learn more</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
