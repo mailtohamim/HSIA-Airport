@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Search, Plane, Clock, Shield, Map, Coffee, ShoppingBag, Star, ChevronRight, Info, Heart, Camera, Briefcase } from 'lucide-react';
+import { Search, Plane, Clock, Shield, Map, Coffee, ShoppingBag, Star, ChevronRight, Info, Heart, Camera, Briefcase, Bus } from 'lucide-react';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
