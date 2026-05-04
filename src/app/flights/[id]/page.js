@@ -33,7 +33,7 @@ export default function FlightDetailPage({ params }) {
           <Link href="/flights/status" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: 24, fontWeight: 700 }}>
             <ArrowLeft size={16} /> BACK TO FLIGHT STATUS
           </Link>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 40 }}>
             <div>
               <div style={{ fontSize: '1.1rem', fontWeight: 600, opacity: 0.9, marginBottom: 8 }}>
                 {flight.flightNumber} • {airline ? airline.name : ''}
