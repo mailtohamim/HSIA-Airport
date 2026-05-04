@@ -33,7 +33,7 @@ export default function FlightDetailPage({ params }) {
           <Link href="/flights/status" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: 24, fontWeight: 700 }}>
             <ArrowLeft size={16} /> BACK TO FLIGHT STATUS
           </Link>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16 }}>
             <div>
               <div style={{ fontSize: '1.1rem', fontWeight: 600, opacity: 0.9, marginBottom: 8 }}>
                 {flight.flightNumber} • {airline ? airline.name : ''}
@@ -70,7 +70,7 @@ export default function FlightDetailPage({ params }) {
         </div>
       </div>
 
-      <div className="container" style={{ padding: '80px 0 120px' }}>
+      <div className="container" style={{ paddingTop: 80, paddingBottom: 120 }}>
         {/* Tracker Section - Now visible for all flights including arrivals */}
         <div style={{ marginBottom: 80 }}>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 32 }}>Live Flight Tracker</h2>
