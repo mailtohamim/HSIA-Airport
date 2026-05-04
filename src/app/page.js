@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Search, Plane, Clock, Shield, Map, Coffee, ShoppingBag, Star, ChevronRight, Info, Heart, Camera, Briefcase, Bus } from 'lucide-react';
+import EventCarousel from '@/components/EventCarousel';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -186,27 +187,7 @@ export default function Home() {
       </section>
 
       {/* Events */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Happening in Dhaka</h2>
-          </div>
-          <div className="services-grid">
-            {[
-              { title: 'Cultural Festival', icon: <Camera size={32} /> },
-              { title: 'Trade Expo', icon: <Briefcase size={32} /> },
-              { title: 'Heritage Tour', icon: <Map size={32} /> },
-            ].map((ev, i) => (
-              <div key={i} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
-                <div className="service-icon-box">{ev.icon}</div>
-                <h3>{ev.title}</h3>
-                <p>Explore the vibrant events and rich history of Bangladesh's capital city.</p>
-                <Link href="/" className="mega-link">Learn more</Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <EventCarousel />
     </>
   );
 }
