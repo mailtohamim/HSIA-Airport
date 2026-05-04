@@ -261,7 +261,7 @@ img { max-width: 100%; height: auto; }
 
 .f-time { font-weight: 800; font-size: 1.1rem; }
 .f-info { display: flex; align-items: center; gap: 20px; }
-.f-airline-logo { width: 48px; height: 48px; background: var(--bg-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary); flex-shrink: 0; }
+.f-airline-logo { width: 120px; height: 48px; background: var(--bg-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary); flex-shrink: 0; padding: 0 8px; }
 .f-dest-name { font-weight: 800; font-size: 1.1rem; line-height: 1.2; }
 .f-dest-sub { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
 .status-pill {

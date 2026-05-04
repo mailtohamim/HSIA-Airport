@@ -197,7 +197,7 @@ export default function FlightStatusPage() {
           .status-header-mobile { padding: 0; }
           .pb-100 { padding-bottom: 40px; }
           
-          .f-airline-logo { width: 40px; height: 40px; }
+          .f-airline-logo { width: 100px; height: 40px; }
           .f-dest-name { font-size: 1rem; }
         }
       `}</style>
