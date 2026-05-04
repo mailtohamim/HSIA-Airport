@@ -175,7 +175,7 @@ export default function Home() {
             <div style={{ maxWidth: 500, position: 'relative', zIndex: 2 }}>
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 24, fontSize: '3rem' }}>CIP Lounge Service</h2>
               <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: 40 }}>Treat yourself to a premium experience while travelling through Hazrat Shahjalal International Airport.</p>
-              <Link href="/" className="btn btn-accent" style={{ padding: '20px 40px', fontSize: '1.1rem' }}>
+              <Link href="/book-cip" className="btn btn-accent" style={{ padding: '20px 40px', fontSize: '1.1rem' }}>
                 Book CIP Service <ChevronRight size={20} />
               </Link>
             </div>
