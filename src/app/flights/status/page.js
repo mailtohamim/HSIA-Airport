@@ -108,7 +108,13 @@ function FlightStatusContent() {
                 </div>
               </div>
               <div className="f-info">
-                <div className="f-airline-logo">{flight.airlineCode}</div>
+                <div className="f-airline-logo">
+                  {airline?.logo ? (
+                    <img src={airline.logo} alt={airline.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
+                  ) : (
+                    flight.airlineCode
+                  )}
+                </div>
                 <div>
                   <div className="f-dest-name">{airport ? airport.city : dest}</div>
                   <div className="f-dest-sub">{flight.flightNumber} • {airline ? airline.name : ''}</div>

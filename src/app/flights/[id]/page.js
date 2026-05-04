@@ -35,8 +35,15 @@ export default function FlightDetailPage({ params }) {
           </Link>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 40 }}>
             <div>
-              <div style={{ fontSize: '1.1rem', fontWeight: 600, opacity: 0.9, marginBottom: 8 }}>
-                {flight.flightNumber} • {airline ? airline.name : ''}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                {airline?.logo && (
+                  <div style={{ width: 40, height: 40, background: '#fff', borderRadius: 8, padding: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <img src={airline.logo} alt={airline.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  </div>
+                )}
+                <div style={{ fontSize: '1.1rem', fontWeight: 600, opacity: 0.9 }}>
+                  {flight.flightNumber} • {airline ? airline.name : ''}
+                </div>
               </div>
               <h1 className="page-title" style={{ color: '#fff', marginBottom: 0 }}>
                 {dest ? `${dest.city} (${flight.destination})` : flight.destination}

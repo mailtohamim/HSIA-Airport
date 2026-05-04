@@ -2,26 +2,26 @@
 // Coordinates: 23.8433° N, 90.3978° E
 
 const airlines = {
-  BG: { name: 'Biman Bangladesh Airlines', code: 'BG', website: 'bfrbd.com' },
+  BG: { name: 'Biman Bangladesh Airlines', code: 'BG', website: 'bfrbd.com', logo: '/Airlines Logos/Biman Airlines logo.svg' },
   BS: { name: 'US-Bangla Airlines', code: 'BS', website: 'usbair.com' },
   VQ: { name: 'Novoair', code: 'VQ', website: 'flynovoair.com' },
   H9: { name: 'Air Astra', code: 'H9', website: 'airastra.com' },
-  AI: { name: 'Air India', code: 'AI', website: 'airindia.com' },
-  SQ: { name: 'Singapore Airlines', code: 'SQ', website: 'singaporeair.com' },
+  AI: { name: 'Air India', code: 'AI', website: 'airindia.com', logo: '/Airlines Logos/Air India 2023.svg' },
+  SQ: { name: 'Singapore Airlines', code: 'SQ', website: 'singaporeair.com', logo: '/Airlines Logos/Singapore Airlines Logo.svg' },
   MH: { name: 'Malaysia Airlines', code: 'MH', website: 'malaysiaairlines.com' },
-  TG: { name: 'Thai Airways', code: 'TG', website: 'thaiairways.com' },
+  TG: { name: 'Thai Airways', code: 'TG', website: 'thaiairways.com', logo: '/Airlines Logos/Thai Airways logo.svg' },
   EK: { name: 'Emirates', code: 'EK', website: 'emirates.com' },
-  QR: { name: 'Qatar Airways', code: 'QR', website: 'qatarairways.com' },
+  QR: { name: 'Qatar Airways', code: 'QR', website: 'qatarairways.com', logo: '/Airlines Logos/Qatar Airways logo.svg' },
   SV: { name: 'Saudia', code: 'SV', website: 'saudia.com' },
-  TK: { name: 'Turkish Airlines', code: 'TK', website: 'turkishairlines.com' },
+  TK: { name: 'Turkish Airlines', code: 'TK', website: 'turkishairlines.com', logo: '/Airlines Logos/Turkish Airlines logo 2019.svg' },
   CZ: { name: 'China Southern Airlines', code: 'CZ', website: 'csair.com' },
-  KU: { name: 'Kuwait Airways', code: 'KU', website: 'kuwaitairways.com' },
-  GF: { name: 'Gulf Air', code: 'GF', website: 'gulfair.com' },
+  KU: { name: 'Kuwait Airways', code: 'KU', website: 'kuwaitairways.com', logo: '/Airlines Logos/Kuwait Airways wordmark.svg' },
+  GF: { name: 'Gulf Air', code: 'GF', website: 'gulfair.com', logo: '/Airlines Logos/Gulf Air 2018 wordmark.svg' },
   WY: { name: 'Oman Air', code: 'WY', website: 'omanair.com' },
   FZ: { name: 'flydubai', code: 'FZ', website: 'flydubai.com' },
-  UK: { name: 'Vistara', code: 'UK', website: 'airvistara.com' },
-  '6E': { name: 'IndiGo', code: '6E', website: 'goindigo.in' },
-  OD: { name: 'Malindo Air', code: 'OD', website: 'malindoair.com' },
+  UK: { name: 'Vistara', code: 'UK', website: 'airvistara.com', logo: '/Airlines Logos/Vistara Logo.svg' },
+  '6E': { name: 'IndiGo', code: '6E', website: 'goindigo.in', logo: '/Airlines Logos/IndiGo Airlines logo.svg' },
+  OD: { name: 'Malindo Air', code: 'OD', website: 'malindoair.com', logo: '/Airlines Logos/Malindo Air logo.svg' },
 };
 
 const airports = {

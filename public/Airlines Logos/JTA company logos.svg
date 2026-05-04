@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="427" width="640" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4">
+  <linearGradient id="linearGradient2726" y2="216" gradientUnits="userSpaceOnUse" x2="373.52" gradientTransform="translate(130,0)" y1="216" x1="236.48">
+   <stop id="stop2762" stop-color="#808080" offset="0"/>
+   <stop id="stop2772" stop-color="#808080" offset="0.25"/>
+   <stop id="stop2770" stop-color="#808080" stop-opacity="0.64406782" offset="0.5"/>
+   <stop id="stop2764" stop-color="#808080" stop-opacity="0.89830506" offset="1"/>
+   <stop id="stop2766" stop-color="#808080" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path95" stroke-width="1px" d="m420,117,60,0,70,180-50,0-50-119-50,119-50,0,70-180z"/>
+  <path id="path99" d="m170,117,40,0v125s6.919,55-70,55c-30.924,0-50-23-50-23l20-27s16.27,14.963,30,15c38.591,0.10344,30-25,30-25v-120z" stroke-width="1px" fill="#000"/>
+  <path id="path133-8" d="m500,62,40,0s-5.0889,160.76-40,209c-34.438,47.586-105,101-105,101s-30-35-30-35,85.557-57.699,110-100c24.697-42.741,25-175,25-175z" stroke="#FFF" stroke-width="1px" fill="#e11e28"/>
+  <path id="path133-8-6" d="m500,62s12.627,154.89-25,210c-37.627,55.109-80,100-80,100s-30-35-30-35,82.557-57.699,107-100c24.697-42.741,28-175,28-175z" stroke-width="1px" fill="#FFF"/>
+  <path id="path133-8-6-9" d="m501.48,61s12.627,154.89-25,210c-37.627,55.109-80,100-80,100s-30-35-30-35,82.557-57.699,107-100c24.697-42.741,28-175,28-175z" stroke-width="1px" fill="url(#linearGradient2726)"/>
+  <path id="path130" d="m230,117,0,40,50,0,0,140,45,0,0-140,45,0,0-40-140,0z" stroke-width="1px" fill="#000"/>
+  <path id="path214" stroke-width="1px" d="M-1,0,640,2"/>
+ </g>
+</svg>

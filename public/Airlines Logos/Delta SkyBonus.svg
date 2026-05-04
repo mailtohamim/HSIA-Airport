@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="60.877998"
+   height="13.696"
+   viewBox="0 0 60.877998 13.696"
+   enable-background="new 0 0 64 15"
+   xml:space="preserve"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="AJAX.svg"><metadata
+   id="metadata45"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs43" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1280"
+   inkscape:window-height="1004"
+   id="namedview41"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="5.6568543"
+   inkscape:cx="62.723618"
+   inkscape:cy="-12.208047"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g3"
+   transform="translate(-0.959,-0.65200003)">
+	<path
+   d="M 5.674,4.144 3.407,3.052 v -2.4 M 5.854,4.558 3.407,3.526 v 1.032 h 2.447 z"
+   id="path5"
+   inkscape:connector-curvature="0"
+   style="fill:#98002e" />
+	<polyline
+   points="1.138,4.144 3.407,0.652 3.407,3.052  "
+   id="polyline7"
+   style="fill:#e31837" />
+	<polyline
+   points="0.959,4.558 3.407,4.558 3.407,3.526  "
+   id="polyline9"
+   style="fill:#e31837" />
+	
+	<path
+   d="m 7.766,4.144 h 1.1 c 1.13,0 1.806,-0.586 1.806,-1.56 0,-0.974 -0.675,-1.558 -1.806,-1.558 h -1.1 m 0.696,0.54 h 0.403 c 0.736,0 1.102,0.366 1.102,1.018 0,0.652 -0.366,1.018 -1.102,1.018 H 8.462 V 1.566 z"
+   id="path13"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<polyline
+   points="13.036,2.791 14.36,2.791 14.36,2.25 13.036,2.25 13.036,1.566 14.533,1.566 14.533,1.026    12.34,1.026 12.34,4.144 14.582,4.144 14.582,3.602 13.036,3.602  "
+   id="polyline15"
+   style="fill:#003d79" />
+	<polyline
+   points="18.546,3.602 17.205,3.602 17.205,1.026 16.506,1.026 16.506,4.144 18.546,4.144  "
+   id="polyline17"
+   style="fill:#003d79" />
+	<polyline
+   points="22.306,1.026 19.509,1.026 19.509,1.566 20.557,1.566 20.557,4.144 21.258,4.144 21.258,1.566    22.306,1.566  "
+   id="polyline19"
+   style="fill:#003d79" />
+	<path
+   d="M 26.349,4.144 H 25.621 L 25.316,3.36 h -1.269 l -0.303,0.784 h -0.681 l 1.302,-3.132 h 0.702 M 25.117,2.84 24.682,1.735 24.247,2.84 h 0.87 z"
+   id="path21"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<path
+   d="m 9.409,14.297 c -0.756,0 -1.432,-0.182 -1.946,-0.455 l 0.142,-0.967 c 0.474,0.314 1.129,0.592 1.825,0.592 0.726,0 1.24,-0.379 1.24,-1.057 0,-0.635 -0.281,-0.896 -1.331,-1.371 -1.311,-0.596 -1.804,-1.027 -1.804,-2.027 0,-1.118 0.857,-1.834 2.118,-1.834 0.675,0 1.179,0.162 1.583,0.393 L 11.084,8.519 C 10.7,8.226 10.176,8.005 9.622,8.005 c -0.797,0 -1.149,0.423 -1.149,0.937 0,0.535 0.261,0.786 1.319,1.271 1.353,0.613 1.816,1.078 1.816,2.127 -0.001,1.199 -0.899,1.957 -2.199,1.957"
+   id="path23"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<polyline
+   points="17.959,14.287 14.682,10.684 14.682,14.215 13.735,14.215 13.735,7.259 14.682,7.259    14.682,10.383 17.626,7.259 18.765,7.259 15.711,10.484 18.947,14.064  "
+   id="polyline25"
+   style="fill:#003d79" />
+	<polyline
+   points="23.322,11.453 23.322,14.215 22.373,14.215 22.373,11.453 19.914,7.39 20.862,7.188    22.858,10.584 24.804,7.259 25.852,7.259  "
+   id="polyline27"
+   style="fill:#003d79" />
+	<path
+   d="M 29.381,14.215 H 27.717 V 7.259 h 1.685 c 1.533,0 2.248,0.736 2.248,1.805 0,0.706 -0.373,1.179 -0.998,1.44 0.775,0.232 1.301,0.758 1.301,1.674 -10e-4,1.39 -0.968,2.037 -2.572,2.037 m 0,-6.15 h -0.736 v 2.116 h 0.665 c 0.918,0 1.412,-0.402 1.412,-1.089 0,-0.634 -0.392,-1.027 -1.341,-1.027 m 0.04,2.894 h -0.776 v 2.447 h 0.807 c 0.998,0 1.571,-0.398 1.571,-1.207 -0.001,-0.806 -0.564,-1.24 -1.602,-1.24"
+   id="path29"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<path
+   d="m 36.933,14.348 c -1.957,0 -3.196,-1.453 -3.196,-3.598 0,-2.161 1.26,-3.623 3.216,-3.623 1.966,0 3.199,1.452 3.199,3.597 -10e-4,2.151 -1.255,3.624 -3.219,3.624 m 0.01,-6.353 c -1.381,0 -2.23,1.069 -2.23,2.742 0,1.674 0.858,2.742 2.23,2.742 1.382,0 2.227,-1.068 2.227,-2.742 0,-1.674 -0.857,-2.742 -2.227,-2.742"
+   id="path31"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<polyline
+   points="47.044,14.215 43.224,8.802 43.224,14.215 42.348,14.215 42.348,7.259 43.192,7.259    46.885,12.471 46.885,7.259 47.761,7.259 47.761,14.215  "
+   id="polyline33"
+   style="fill:#003d79" />
+	<path
+   d="m 52.861,14.348 c -1.685,0 -2.69,-1.068 -2.69,-2.762 V 7.259 h 0.945 v 4.206 c 0,1.207 0.546,2.014 1.745,2.014 1.18,0 1.777,-0.725 1.777,-1.986 V 7.259 h 0.945 v 4.274 c 0.001,1.752 -1.037,2.815 -2.722,2.815"
+   id="path35"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	<path
+   d="m 59.638,14.297 c -0.754,0 -1.433,-0.182 -1.947,-0.455 l 0.142,-0.967 c 0.475,0.314 1.128,0.592 1.826,0.592 0.728,0 1.24,-0.379 1.24,-1.057 0,-0.635 -0.283,-0.896 -1.332,-1.371 -1.31,-0.596 -1.806,-1.027 -1.806,-2.027 0,-1.118 0.86,-1.834 2.12,-1.834 0.674,0 1.179,0.162 1.583,0.393 L 61.312,8.519 C 60.928,8.226 60.402,8.005 59.85,8.005 c -0.798,0 -1.148,0.423 -1.148,0.937 0,0.535 0.259,0.786 1.321,1.271 1.35,0.613 1.814,1.078 1.814,2.127 0,1.199 -0.899,1.957 -2.199,1.957"
+   id="path37"
+   inkscape:connector-curvature="0"
+   style="fill:#003d79" />
+	
+</g>
+</svg>
