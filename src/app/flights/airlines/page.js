@@ -62,8 +62,12 @@ export default function AirlinesPage() {
         <div className="services-grid">
           {filtered.map(airline => (
             <div key={airline.code} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
-              <div className="service-icon-box" style={{ width: 80, height: 80, fontSize: '1.5rem', fontWeight: 900 }}>
-                {airline.code}
+              <div className="service-icon-box" style={{ width: 80, height: 80, fontSize: '1.5rem', fontWeight: 900, background: '#fff', padding: airline.logo ? 8 : 0 }}>
+                {airline.logo ? (
+                  <img src={airline.logo} alt={airline.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                ) : (
+                  airline.code
+                )}
               </div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: 4 }}>{airline.name}</h3>
               <p style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', marginBottom: 16 }}>{airline.code}</p>

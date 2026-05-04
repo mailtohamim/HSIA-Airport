@@ -16,6 +16,11 @@ const airlines = {
   UK: { name: 'Vistara', code: 'UK', website: 'airvistara.com', logo: '/Airlines Logos/Vistara Logo.svg' },
   '6E': { name: 'IndiGo', code: '6E', website: 'goindigo.in', logo: '/Airlines Logos/IndiGo Airlines logo.svg' },
   OD: { name: 'Malindo Air', code: 'OD', website: 'malindoair.com', logo: '/Airlines Logos/Malindo Air logo.svg' },
+  G9: { name: 'Air Arabia', code: 'G9', website: 'airarabia.com', logo: '/Airlines Logos/Air Arabia logo 2018.svg' },
+  CX: { name: 'Cathay Pacific', code: 'CX', website: 'cathaypacific.com', logo: '/Airlines Logos/Cathay Pacific Ltd. logo.svg' },
+  MS: { name: 'EgyptAir', code: 'MS', website: 'egyptair.com', logo: '/Airlines Logos/Egyptair-Logo-2010.svg' },
+  J9: { name: 'Jazeera Airways', code: 'J9', website: 'jazeeraairways.com', logo: '/Airlines Logos/Jazeera Airways logo.svg' },
+  AK: { name: 'AirAsia', code: 'AK', website: 'airasia.com', logo: '/Airlines Logos/AirAsia Logo.svg' },
 };
 
 const airports = {
