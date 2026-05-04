@@ -348,6 +348,7 @@ img { max-width: 100%; height: auto; }
   .service-icon-box svg { width: 24px; height: 24px; }
   .service-card h3 { font-size: 1rem; margin-bottom: 8px; }
   .service-card p { font-size: 0.85rem; margin-bottom: 16px; }
+  .service-card .btn { font-size: 0.85rem; padding: 12px 16px; white-space: normal; width: 100%; text-align: center; }
   
   .quick-access { gap: 12px; }
   .quick-btn { padding: 16px; border-radius: 12px; }
