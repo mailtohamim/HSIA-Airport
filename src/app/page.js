@@ -95,13 +95,13 @@ export default function Home() {
               <div className="service-icon-box"><Heart size={32} /></div>
               <h3>Special Assistance</h3>
               <p>Tailored support for passengers with reduced mobility or special needs.</p>
-              <Link href="/information/baggage" className="btn btn-outline">Explore services</Link>
+              <Link href="/information/special-assistance" className="btn btn-outline">Explore services</Link>
             </div>
             <div className="service-card">
               <div className="service-icon-box"><Shield size={32} /></div>
               <h3>Travel Guidance</h3>
               <p>Essential information on entry requirements and safety protocols.</p>
-              <Link href="/information/immigration-visas" className="btn btn-outline">View guidance</Link>
+              <Link href="/information/travel-guidance" className="btn btn-outline">View guidance</Link>
             </div>
             <div className="service-card">
               <div className="service-icon-box"><ShoppingBag size={32} /></div>
