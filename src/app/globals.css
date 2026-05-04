@@ -377,6 +377,7 @@ img { max-width: 100%; height: auto; }
     grid-template-columns: repeat(2, 1fr) !important;
     padding: 24px !important;
     gap: 24px !important;
+    margin-top: 32px !important;
   }
   .fd-col {
     padding: 0 !important;
