@@ -62,7 +62,7 @@ export default function AirlinesPage() {
         <div className="services-grid">
           {filtered.map(airline => (
             <div key={airline.code} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
-              <div className="service-icon-box" style={{ width: 80, height: 80, fontSize: '1.5rem', fontWeight: 900, background: '#fff', padding: airline.logo ? 8 : 0 }}>
+              <div className="service-icon-box airline-icon-box" style={{ fontSize: '1.5rem', fontWeight: 900, background: '#fff', padding: airline.logo ? 8 : 0 }}>
                 {airline.logo ? (
                   <img src={airline.logo} alt={airline.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 ) : (
@@ -90,6 +90,18 @@ export default function AirlinesPage() {
           ))}
         </div>
       </div>
+      <style jsx>{`
+        .airline-icon-box {
+          width: 80px;
+          height: 80px;
+        }
+        @media (max-width: 768px) {
+          .airline-icon-box {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      `}</style>
     </div>
   );
 }

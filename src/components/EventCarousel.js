@@ -35,9 +35,9 @@ export default function EventCarousel() {
           </div>
         </div>
         
-        <div ref={scrollRef} style={{ display: 'flex', gap: 24, overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none', paddingBottom: 16 }}>
+        <div ref={scrollRef} style={{ display: 'flex', gap: 24, overflowX: 'auto', paddingBottom: 16 }} className="carousel-container">
           {events.map((ev, i) => (
-            <div key={i} className="service-card" style={{ flex: '0 0 auto', width: 320, textAlign: 'left', alignItems: 'flex-start' }}>
+            <div key={i} className="service-card event-card-wrapper" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
               <div className="service-icon-box">{ev.icon}</div>
               <h3>{ev.title}</h3>
               <p>{ev.desc}</p>
@@ -46,8 +46,24 @@ export default function EventCarousel() {
           ))}
         </div>
         <style jsx>{`
-          div::-webkit-scrollbar {
+          .carousel-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+          }
+          .carousel-container::-webkit-scrollbar {
             display: none;
+          }
+          .event-card-wrapper {
+            flex: 0 0 auto;
+            width: 320px;
+            scroll-snap-align: center;
+          }
+          @media (max-width: 768px) {
+            .event-card-wrapper {
+              width: 280px;
+            }
           }
         `}</style>
       </div>
