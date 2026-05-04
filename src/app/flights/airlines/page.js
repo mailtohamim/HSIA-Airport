@@ -77,12 +77,12 @@ export default function AirlinesPage() {
                   <MapPin size={16} /> <span>Terminal {airline.code.startsWith('B') || airline.code.startsWith('V') || airline.code.startsWith('H') ? 'T1' : 'T2'}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '0.9rem', color: 'var(--text-light)' }}>
-                  <Globe size={16} /> <span>{airline.website}</span>
+                  <Globe size={16} /> <a href={`https://${airline.website}`} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{airline.website}</a>
                 </div>
               </div>
 
               <div style={{ marginTop: 24, width: '100%', borderTop: '1px solid var(--border)', paddingTop: 16 }}>
-                <Link href="/" className="mega-link" style={{ fontWeight: 800, color: 'var(--primary)' }}>
+                <Link href={`/flights/status?search=${airline.code}`} className="mega-link" style={{ fontWeight: 800, color: 'var(--primary)' }}>
                   View flights <ChevronRight size={16} />
                 </Link>
               </div>
