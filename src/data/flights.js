@@ -2,7 +2,7 @@
 // Coordinates: 23.8433° N, 90.3978° E
 
 const airlines = {
-  BG: { name: 'Biman Bangladesh Airlines', code: 'BG', website: 'bfrbd.com', logo: '/Airlines Logos/Biman Airlines logo.svg' },
+  BG: { name: 'Biman Bangladesh Airlines', code: 'BG', website: 'biman-airlines.com', logo: '/Airlines Logos/Biman Airlines logo.svg' },
   AI: { name: 'Air India', code: 'AI', website: 'airindia.com', logo: '/Airlines Logos/Air India 2023.svg' },
   SQ: { name: 'Singapore Airlines', code: 'SQ', website: 'singaporeair.com', logo: '/Airlines Logos/Singapore Airlines wordmark.svg' },
   TG: { name: 'Thai Airways', code: 'TG', website: 'thaiairways.com', logo: '/Airlines Logos/Thai Airways logo.svg' },
