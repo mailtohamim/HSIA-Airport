@@ -47,7 +47,7 @@ export default function BookCIPPage() {
   return (
     <div style={{ paddingBottom: 80 }}>
       {/* Header */}
-      <div style={{ background: 'var(--primary)', color: '#fff', padding: '60px 0', marginBottom: 40 }}>
+      <div className="cip-header" style={{ background: 'var(--primary)', color: '#fff', padding: '60px 0', marginBottom: 40 }}>
         <div className="container">
           <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', color: '#fff', opacity: 0.8, textDecoration: 'none', marginBottom: 24 }}>
             <ArrowLeft size={20} style={{ marginRight: 8 }} /> Back to Home
@@ -63,11 +63,11 @@ export default function BookCIPPage() {
         <div className="book-cip-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: 40, alignItems: 'start' }}>
           
           {/* Form Section */}
-          <div style={{ background: '#fff', padding: '40px', borderRadius: 24, boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
+          <div className="cip-form-card" style={{ background: '#fff', padding: '40px', borderRadius: 24, boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
             <form onSubmit={handleSubmit}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: 24, paddingBottom: 16, borderBottom: '1px solid var(--border)' }}>Passenger Information</h3>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+              <div className="cip-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
                 <div>
                   <label style={{ display: 'block', marginBottom: 8, fontWeight: 500 }}>First Name</label>
                   <div style={{ position: 'relative' }}>
@@ -84,7 +84,7 @@ export default function BookCIPPage() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 40 }}>
+              <div className="cip-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 40 }}>
                 <div>
                   <label style={{ display: 'block', marginBottom: 8, fontWeight: 500 }}>Email Address</label>
                   <div style={{ position: 'relative' }}>
@@ -105,7 +105,7 @@ export default function BookCIPPage() {
               
               <div style={{ marginBottom: 24 }}>
                 <label style={{ display: 'block', marginBottom: 12, fontWeight: 500 }}>Service Type</label>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                <div className="cip-service-type" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                   <label style={{ display: 'flex', alignItems: 'center', padding: 16, border: `2px solid ${formData.serviceType === 'departure' ? 'var(--primary)' : 'var(--border)'}`, borderRadius: 12, cursor: 'pointer', background: formData.serviceType === 'departure' ? 'rgba(1, 121, 111, 0.05)' : 'transparent', transition: 'all 0.2s' }}>
                     <input type="radio" name="serviceType" value="departure" checked={formData.serviceType === 'departure'} onChange={handleChange} style={{ marginRight: 12 }} />
                     <PlaneTakeoff size={20} style={{ marginRight: 8, color: formData.serviceType === 'departure' ? 'var(--primary)' : 'var(--text-light)' }} />
@@ -119,7 +119,7 @@ export default function BookCIPPage() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+              <div className="cip-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
                 <div>
                   <label style={{ display: 'block', marginBottom: 8, fontWeight: 500 }}>Flight Number</label>
                   <div style={{ position: 'relative' }}>
@@ -211,12 +211,21 @@ export default function BookCIPPage() {
             grid-template-columns: 1fr !important;
           }
         }
-        @media (max-width: 600px) {
-          form > div[style*="display: grid"] {
+        @media (max-width: 768px) {
+          .cip-form-card {
+            padding: 24px 16px !important;
+          }
+          .cip-form-row {
+            grid-template-columns: 1fr !important;
+          }
+          .cip-service-type {
             grid-template-columns: 1fr !important;
           }
           h1 {
-            fontSize: 2.2rem !important;
+            font-size: 2rem !important;
+          }
+          .cip-header {
+            padding: 40px 0 !important;
           }
         }
       `}</style>

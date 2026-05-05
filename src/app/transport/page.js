@@ -26,9 +26,9 @@ export default function TransportPage() {
       </div>
 
       <div className="container" style={{ padding: '80px 0 120px' }}>
-        <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))' }}>
+        <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
           {options.map((opt, i) => (
-            <div key={i} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start', padding: 48 }}>
+            <div key={i} className="service-card" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
               <div className="service-icon-box" style={{ background: 'var(--bg-light)', color: opt.color }}>{opt.icon}</div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: 16 }}>{opt.title}</h3>
               <p style={{ fontSize: '1rem', color: 'var(--text-light)', lineHeight: 1.8, marginBottom: 32 }}>{opt.desc}</p>
